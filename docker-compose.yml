@@ -18,3 +18,18 @@ services:
     ports:
       - 5432:5432
     restart: on-failure
+
+  springboot-app:
+    build:
+      context: .
+      dockerfile: Dockerfile-springboot
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgis:5432/exampledb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.spatial.dialect.postgis.PostgisPG10Dialect
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgis
+    restart: on-failure
