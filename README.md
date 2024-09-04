@@ -158,8 +158,6 @@ This ensures your custom settings are applied.
 
 Please be aware of the rate limits and quota restrictions of the **RapidAPI** service. Ensure you manage your API key securely and monitor usage to avoid exceeding any limits, which could impact the application's ability to fetch weather data.
 
-Here’s a concise **Future Enhancements** section focusing on three key areas:
-
 ---
 
 ## Future Enhancements
